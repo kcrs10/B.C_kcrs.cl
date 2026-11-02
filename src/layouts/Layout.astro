@@ -1,0 +1,34 @@
+---
+// src/layouts/Layout.astro
+import '../styles/global.css';
+import { siteConfig } from '../data/portfolio';
+---
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{siteConfig.title}</title>
+  <meta name="description" content={siteConfig.description}>
+  <meta name="theme-color" content="#070a12">
+  <link rel="canonical" href="https://kcrs.cl/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://kcrs.cl/">
+  <meta property="og:title" content={siteConfig.title}>
+  <meta property="og:description" content="Técnico en ciberseguridad desde Vicuña, Chile. SIEM, auditoría ISO 27001, pentesting y análisis de vulnerabilidades.">
+  <meta property="og:locale" content="es_CL">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body id="top">
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <a class="skip" href="#perfil">Saltar al contenido</a>
+  <slot />
+  <script src="../scripts/main.js"></script>
+</body>
+</html>
